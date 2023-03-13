@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
   lng = 59.910742;
 
   ngOnInit() {
-    // get access token
+    // get access token for the environment.ts file
     mapboxgl!.accessToken = environment.mapbox.accessToken;
     this.map = new mapboxgl.Map({
       // where need to show map. inside the div we can pass this map as id
@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
     // add pop up
     const popup = new mapboxgl.Popup({ offset: 25 }).setText('Hi sanda');
 
-    // add pin
+    // add pin/marker
     new mapboxgl.Marker({
       color: '#eb4034',
       scale: 1.1
